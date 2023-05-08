@@ -1,38 +1,259 @@
-.App {
+* {
+  margin: 0%;
+  padding: 0%;
+}
+
+body {
+  background-image: url(../public/img/background.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#greetingHome {
+  margin-bottom: 2rem;
   text-align: center;
+  color: #fff;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.ListGroup {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+#SectionHome{
+  display: flex;
+  width: auto;
+  height: 500px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+#SectionHome img{
+  width: 0px;
+  flex-grow: 1;
+  object-fit: cover;
+  transition: .5s ease;
+}
+
+#SectionHome img:hover{
+  cursor: pointer;
+  width: 300px;
+  opacity: 1;
+  filter: contrast(120%);
+}
+
+/*Estilos NAVBAR*/
+.NavLinkStyle {
+  font-size: large;
+  text-decoration: none;
+  padding: 0;
+  margin-left: 2rem;
+  margin-right: 2rem;
+  border: none;
+  color: #e6e6e6;
+  transition: all 0.2s ease-in-out;
+}
+
+.NavLinkStyle:hover {
+  font-weight: bold;
+  transform: scale(1.1);
+  color: #e0a841;
+}
+/* Estilos del LOGO NAVBAR*/
+.BskBeatsLogo {
+  height: 70px;
+  transition: all 0.2s ease-in-out;
+}
+
+.BskBeatsLogo:hover {
+  height: 70px;
+  opacity: 0.5;
+  transform: scale(1.1);
+}
+
+/*Estilos del componente ITEMCOUNT*/
+.Counter {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  margin: 20px;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #FFF3F8;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+.Controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.Button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  background-color: #db9358;
+  border-radius: 50%;
+  border: none;
+  font-size: 18px;
+  color: #282c34;
+  cursor: pointer;
+}
+
+.Button:hover {
+  background-color: #c58d15;
+}
+
+.Number {
+  display: inline-block;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  margin: 0 10px;
+  color: #282c34;
+}
+
+.ButtonAdd {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #f0c348;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.ButtonAdd:hover {
+  background-color: #f8bf55;
+  font-weight: bold;
+  color: #333;
+}
+
+.ButtonAdd:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.Controls .Button:first-child {
+  margin-right: 10px;
+}
+
+.Controls .Button:last-child {
+  margin-left: 10px;
+}
+
+
+/*Estilos cards*/
+.CardItem {
+  display: inline-flex;
+  flex-direction: column;
+  width: 300px;
+  height: 534px;
+  margin: 20px;
+  background-color: rgb(236, 235, 235);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease-in-out;
+}
+
+.ItemImg {
+  display: flex;
+  align-items: center;
+}
+
+.CardItemDetail {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  height: 740px;
+  margin: 20px;
+  background-color: rgb(236, 235, 235);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease-in-out;
+}
+
+
+
+.CardItem:hover {
+  transform: translateY(-5px);
+  box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.3);
+  background-color: rgb(221, 221, 221);
+}
+
+.CardItemDetail:hover {
+  transform: translateY(-5px);
+  box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.3);
+  background-color: rgb(221, 221, 221);
+}
+
+.Header {
+  background-color:#ad863c;
   color: white;
+  padding: 10px;
+  text-align: center;
+  border-radius: 10px 10px 0px 0px;
+  font-size: 50px;
 }
 
-.App-link {
-  color: #61dafb;
+.CardItem .Header .ItemHeader {
+  font-size: 20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.CardItemDetail .Header .ItemHeader {
+  font-size: 20px;
+}
+
+
+.ItemImage {
+  display: flex;
+  width: auto;
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px 10px 0px 0px;
+}
+
+
+.Info {
+  padding: 11px;
+  margin: 0px;
+  text-align: center;
+  font-size: 16px;
+}
+
+.ItemFooter {
+  color: white;
+  padding: 10px;
+  text-align: center;
+  border-radius: 0px 0px 10px 10px;
+}
+
+.Option {
+  background-color: #272727;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.Option:hover {
+  font-weight: bold;
+  transform: scale(1.1);
+  color: #bd7247;
+}
+
+#cardTitle {
+  font-size: large;
 }
