@@ -5,7 +5,7 @@ const styles = {
     img: {
         height: 30
     }
-}
+};
 
 const CartWidget = () => {
     return (
