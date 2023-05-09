@@ -9,16 +9,16 @@ const ItemListContainer = ({greeting}) => {
     const [products, setProducts] = useState ([])
     const { categoryId } = useParams()
     const location = useLocation()
-    const isRoot = location.pathname === "/"
+    const isRoot = location.pathname === '/'
 
     useEffect(() => {
         const asyncFunc = categoryId ? () => getProductsByCategory(categoryId) : getProducts
 
         asyncFunc().then((response) => {
             setProducts(response)
-        })
+        });
     
-    }, [categoryId])
+    }, [categoryId]);
     
     return (
         <div>
@@ -34,7 +34,7 @@ const ItemListContainer = ({greeting}) => {
                     </section>
                 </>
             ) : null }
-            <ItemList products={products} />
+            <ItemList products={products}/>
         </div>
     );
 };

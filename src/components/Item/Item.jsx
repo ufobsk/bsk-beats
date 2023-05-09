@@ -1,3 +1,4 @@
+import "../../App.css";
 import { Link } from "react-router-dom";
 
 const Item = ({id, name, img, price, stock}) => {
@@ -13,7 +14,7 @@ const Item = ({id, name, img, price, stock}) => {
             </picture>
             
             <section>
-                <p className="Info"> Precio: ${price} </p>
+                <p className="Info"> Precio: $USD{price} </p>
                 <p className="Info"> Stock disponible: {stock} </p>
             </section>
             

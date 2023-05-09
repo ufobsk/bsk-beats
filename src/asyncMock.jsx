@@ -2,7 +2,7 @@ const products = [
     {
         id: '1' , 
         name: 'Neptune', 
-        price: 2000 ,
+        price: 20 ,
         img: '../img/firstimage.png',
         stock: 5, 
         description: 'Trap Beat',
@@ -11,7 +11,7 @@ const products = [
     {
         id: '2' , 
         name: 'Magician' , 
-        price: 11000 ,
+        price: 25 ,
         img:  '../img/secondimage.png',
         stock: 8, 
         description: 'Trap Beat',
@@ -21,7 +21,7 @@ const products = [
     {
         id: '3' , 
         name: 'Forest' , 
-        price: 5600 ,
+        price: 30 ,
         img: '../img/thirdimage.png',
         stock: 4, 
         description: 'Trap Beat',
@@ -31,7 +31,7 @@ const products = [
     {
         id: '4' , 
         name: 'Fusion' , 
-        price: 8500 ,
+        price: 20 ,
         img: '../img/fourthimage.png' ,
         stock: 6, 
         description: 'Trap Beat',
@@ -41,7 +41,7 @@ const products = [
     {
         id: '5', 
         name: 'Darkin' , 
-        price: 7500 ,
+        price: 40 ,
         img: '../img/fifthimage.png',
         stock: 3, 
         description: 'Trap Beat',
@@ -52,64 +52,64 @@ const products = [
     {
         id: '6', 
         name: 'ThunderWave' , 
-        price: 450 ,
+        price: 15 ,
         img: '../img/vinilo.png',
-        stock: 25, 
+        stock: 6, 
         description: 'Sample to make beats',
-        category: 'Samples/Loops'
+        category: 'Samples'
 
     },
 
     {
         id: '7', 
         name: 'Atmosphere' , 
-        price: 450 ,
+        price: 18 ,
         img: '../img/vinilo.png',
-        stock: 25, 
+        stock: 8, 
         description: 'Sample to make beats',
-        category: 'Samples/Loops'
+        category: 'Samples'
 
     },
 
     {
         id: '8', 
         name: 'Funcionality' , 
-        price: 12600 ,
+        price: 10 ,
         img: '../img/vinilo.png',
-        stock: 25, 
+        stock: 5, 
         description: 'Sample to make beats',
-        category: 'Samples/Loops'
+        category: 'Samples'
 
     },
 
     {
         id: '9', 
         name: 'Impulsion' , 
-        price: 26750 ,
+        price: 20 ,
         img: '../img/vinilo.png',
-        stock: 25, 
+        stock: 9, 
         description: 'Sample to make beats',
-        category: 'Samples/Loops'
+        category: 'Samples'
 
     },
 
     {
         id: '10', 
         name: 'News Eras Worlwide' , 
-        price: 32450 ,
+        price: 16 ,
         img: '../img/vinilo.png',
-        stock: 25, 
+        stock: 7, 
         description: 'Sample to make beats',
-        category: 'Samples/Loops'
+        category: 'Samples'
 
     },
 
     {
         id: '11', 
         name: 'Selection Kit' , 
-        price: 45760,
+        price: 35,
         img: '../img/selectiondrumkit.png',
-        stock: 25, 
+        stock: 13, 
         description: 'Clean Sound Packs',
         category: 'Drumkits'
 
@@ -118,9 +118,9 @@ const products = [
     {
         id: '12', 
         name: 'Clean Sound Selection' , 
-        price: 370,
+        price: 45,
         img: '../img/selectiondrumkit.png',
-        stock: 25, 
+        stock: 18, 
         description: 'Clean Sound Packs',
         category: 'Drumkits'
 
@@ -129,9 +129,9 @@ const products = [
     {
         id: '13', 
         name: 'Waves Clouds' , 
-        price: 45760,
+        price: 55,
         img: '../img/selectiondrumkit.png',
-        stock: 25, 
+        stock: 20, 
         description: 'Clean Sound Packs',
         category: 'Drumkits'
 
@@ -140,7 +140,7 @@ const products = [
 
 export const getProducts = () => {
     return new Promise ((resolve) => {
-        setTimeout(() => {
+        setTimeout (() => {
             resolve(products)
         } , 500)
     });
@@ -148,7 +148,7 @@ export const getProducts = () => {
 
 export const getProductById = (productId) => {
     return new Promise ((resolve) => {
-        setTimeout(() => {
+        setTimeout (() => {
             resolve(products.find(prod=> prod.id === productId))
         } , 500)
     });
@@ -156,7 +156,7 @@ export const getProductById = (productId) => {
 
 export const getProductsByCategory = (category) => {
     return new Promise ((resolve) => {
-        setTimeout(() => {
+        setTimeout (() => {
             resolve(products.filter((prod) => prod.category === category))
         } , 500)
     });
