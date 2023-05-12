@@ -2,6 +2,9 @@ import "../../App.css";
 import ItemCount from '../ItemCount/ItemCount';
 
 const ItemDetail = ({ id, name, img, category, description, price, stock }) => {
+    
+    
+    
     return (
         <article className="CardItemDetail" >
             <header className="Header" >
@@ -18,7 +21,7 @@ const ItemDetail = ({ id, name, img, category, description, price, stock }) => {
             <footer className="ItemFooter">
                 <ItemCount initial={0} stock={10} onAdd={(quantity) => console.log("Cantidad agregada", quantity)}/>
             </footer>
-        </article>                                                        
+        </article>                                                       
     )
 };
 
