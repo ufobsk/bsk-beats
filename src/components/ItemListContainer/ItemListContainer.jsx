@@ -3,10 +3,37 @@ import { useState, useEffect } from "react";
 import { getProducts, getProductsByCategory} from "../../asyncMock";
 import ItemList from "../ItemList/ItemList";
 import { useParams, useLocation } from "react-router-dom";
-import { getFirestore, getDoc, doc } from 'firebase/firestore';
+import { collection, getFirestore, getDocs, getDoc, doc } from 'firebase/firestore';
+
+
+
 
 
 const ItemListContainer = ({greeting}) => {
+    
+    // useEffect(() =>{
+    //     const db = getFirestore();
+    
+    //     const biciRef = doc(db, "items1", "isK1ia7EasfLQYvlJSvf");
+    //     getDoc(biciRef).then((snapshot) => {
+    //         if (snapshot.exists()) {
+    //             setProducts({ id: snapshot.id, ...snapshot.data() });    
+    //         }
+    //     });
+    // }, []);
+
+
+    // useEffect(() => {
+    //     const db = getFirestore();
+
+    //     const itemsCollection = collection(db, "items1");
+    //     getDocs(itemsCollection).then((snapshot) => {
+    //         setProducts(snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() })));
+    //     });
+    // }, []);
+
+
+    
     const [products, setProducts] = useState ([])
     const { categoryId } = useParams()
     const location = useLocation()
