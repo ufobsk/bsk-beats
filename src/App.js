@@ -6,7 +6,7 @@ import Cart from './components/Cart/Cart';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { CartProvider } from './context/cartContext';
 
-// import { getFirestore, getDoc, doc } from 'firebase/firestore'
+// import { getFirestore, getDoc, doc } from 'firebase/firestore';
 
 
 function App() {
