@@ -1,6 +1,9 @@
 import "../../App.css";
 import Badge from 'react-bootstrap/Badge';
 import cart from './assets/cart.svg';
+import { cartContext } from "../../context/cartContext";
+import { Link } from "react-router-dom";
+import { useContext } from "react";
 
 const styles = {
     img: {
@@ -9,9 +12,11 @@ const styles = {
 };
 
 const CartWidget = () => {
+    const { totalQuantity } = useContext(cartContext)
+    
     return (
         <Badge bg="warning" text="dark">
-            <img src={cart} alt="cart-widget" style={styles.img}/>
+            <img className="CartImg" src={cart} alt="cart-widget" style={styles.img}/>
             <span>0</span>
         </Badge>
     );

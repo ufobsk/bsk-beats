@@ -1,14 +1,41 @@
-import { createContext } from "react";
+import { createContext, useState } from "react";
 
-const cartContext = createContext([]);
+export const cartContext = createContext({
+  cart: [],
+});
 
-export const CartProvider = ({ children }) => (
-    <cartContext.Provider value={{
-    }}>
-        ({children})
+export const CartProvider = ({ children }) => {
+  const [cart, setCart] = useState([]);
+
+  console.log(cart);
+
+  const addItem = (item, quantity) => {
+    if (!isInCart(item.id)) {
+      setCart((prev) => [...prev, { ...item, quantity }]);
+    } else {
+      console.error("El producto ya fue agregado");
+    }
+  };
+
+  const removeItem = (itemId) => {
+    const cartUpdated = cart.filter((prod) => prod.id !== itemId);
+    setCart(cartUpdated);
+  };
+
+  const clearCart = () => {
+    setCart([]);
+  };
+
+  const isInCart = (itemId) => {
+    return cart.some(prod => prod.id === itemId)
+  };
+
+  return (
+    <cartContext.Provider value={{ cart, addItem, removeItem, clearCart }}>
+        { children }
     </cartContext.Provider>
-);
-
+  )
+};
 
 /* Metodos recomendados para el Cart Context
 
