@@ -16,7 +16,7 @@ const ItemDetailContainer = () => {
     useEffect(() => {
         setLoading(true)
 
-        const docRef = doc(db, 'products', itemId)
+        const docRef = doc(db, 'items1', itemId)
 
         getDoc(docRef)
             .then(response => {
@@ -39,7 +39,7 @@ const ItemDetailContainer = () => {
     return (
         <div className="ItemDetailContainer">
             <ItemDetail {...product}/>
-            
+
         </div>
     )
 }

@@ -9,7 +9,7 @@ import { db } from "../../services/Firebase/firebaseConfig";
 
 const ItemListContainer = ({greeting}) => {
 
-    const [products, setProducts] = useState ([])
+    const [products, setProducts] = useState([])
     const [loading, setLoading] = useState(true)
     
     const { categoryId } = useParams()
@@ -23,8 +23,8 @@ const ItemListContainer = ({greeting}) => {
         setLoading(true)
 
         const collectionRef = categoryId
-            ? query(collection(db, 'products'), where('category', '==', categoryId))
-            : collection(db, 'products')
+            ? query(collection(db, 'items1'), where('category', '==', categoryId))
+            : collection(db, 'items1')
         
         getDocs(collectionRef)
             .then(response => {
@@ -61,7 +61,7 @@ const ItemListContainer = ({greeting}) => {
                     </section>
                 </>
             ) : null }
-            <ItemList products={products}/>
+            <ItemList items1={products}/>
         </div>
     );
 };

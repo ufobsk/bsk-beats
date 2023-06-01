@@ -17,7 +17,7 @@ const ItemCount = ({stock, initial, onAdd}) => {
         }
     }
 
-    return(
+    return (
         <div className='Counter'>
             <div className='Controls'>
                 <button className='Button' onClick={decrement}>-</button>

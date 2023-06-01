@@ -39,6 +39,6 @@ CartItem {
   
   .CartItem-remove {
     font-size: 14px;
-    color: #f8558b;
+    color: #f8d255;
     cursor: pointer;
   }

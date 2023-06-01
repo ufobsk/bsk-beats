@@ -6,7 +6,7 @@
     position: absolute;
     bottom: 24px;
     right: 14px;
-    background-color: #f8558b;
+    background-color: #ecae03;
     color: #fff;
     font-weight: bold;
     font-size: 12px;
@@ -42,14 +42,14 @@
   .Cart-total-amount {
     font-size: 20px;
     font-weight: bold;
-    color: #f8558b;
+    color: #ecae03;
   }
   
   
   .Cart-empty-link {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #f8558b;
+    background-color: #ecae03;
     border: none;
     border-radius: 5px;
     font-size: 16px;
