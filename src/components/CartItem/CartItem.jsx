@@ -1,4 +1,4 @@
-import '../../App.css'
+import './CartItem.css';
 import React from 'react';
 
 const CartItem = ({ id, name, quantity, price, handleRemoveItem}) => {

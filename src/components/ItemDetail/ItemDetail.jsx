@@ -1,14 +1,14 @@
 import "../../App.css";
 import ItemCount from '../ItemCount/ItemCount';
 import { useState } from "react";
-import { cartContext } from "../../context/cartContext";
+import { CartContext } from "../../context/cartContext";
 import { Link } from "react-router-dom";
 import { useContext } from "react";
 
 const ItemDetail = ({ id, name, img, category, description, price, stock }) => {
     const [quantityAdded, setQuantityAdded] = useState(0)
 
-    const { addItem } = useContext(cartContext)
+    const { addItem } = useContext(CartContext)
 
     const handleOnAdd = (quantity) => {
         setQuantityAdded(quantity)
@@ -23,7 +23,7 @@ const ItemDetail = ({ id, name, img, category, description, price, stock }) => {
     
     return (
         <article className="CardItemDetail" >
-            <header className="Header" >
+            <header className="Header">
                 <h2 className="ItemHeader"> {name} </h2>
             </header>
             <picture>

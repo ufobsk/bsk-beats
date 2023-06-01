@@ -9,6 +9,8 @@ body {
   background-size: cover;
 }
 
+/*Estilos HOME*/
+
 #greetingHome {
   margin-bottom: 2rem;
   text-align: center;
@@ -176,10 +178,10 @@ body {
 }
 
 .CardItemDetail {
-  display: flex;
+  display: inline-flex;
   flex-direction: column;
-  width: 400px;
-  height: 740px;
+  width: 600px;
+  height: 750px;
   margin: 20px;
   background-color: rgb(236, 235, 235);
   border-radius: 10px;
