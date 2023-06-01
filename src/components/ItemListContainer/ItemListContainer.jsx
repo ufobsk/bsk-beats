@@ -1,52 +1,51 @@
 import "../../App.css";
 import { useState, useEffect } from "react";
-import { getProducts, getProductsByCategory} from "../../asyncMock";
 import ItemList from "../ItemList/ItemList";
 import { useParams, useLocation } from "react-router-dom";
-import { collection, getFirestore, getDocs, getDoc, doc } from 'firebase/firestore';
 
-
-
+import { getDocs, collection, query, where } from "firebase/firestore";
+import { db } from "../../services/Firebase/firebaseConfig";
 
 
 const ItemListContainer = ({greeting}) => {
 
-    // useEffect(() =>{
-    //     const db = getFirestore();
-    
-    //     const refDoc = doc(db, "items1", "isK1ia7EasfLQYvlJSvf");
-    //     getDoc(refDoc).then((snapshot) => {
-    //         if (snapshot.exists()) {
-    //             setProducts({ id: snapshot.id, ...snapshot.data() });    
-    //         }
-    //     });
-    // }, []);
-
-
-    // useEffect(() => {
-    //     const db = getFirestore();
-
-    //     const itemsCollection = collection(db, "items1");
-    //     getDocs(itemsCollection).then((snapshot) => {
-    //         setProducts(snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() })));
-    //     });
-    // }, []);
-
-
-    
     const [products, setProducts] = useState ([])
+    const [loading, setLoading] = useState(true)
+    
     const { categoryId } = useParams()
+    
     const location = useLocation()
+    
     const isRoot = location.pathname === '/'
 
     useEffect(() => {
-        const asyncFunc = categoryId ? () => getProductsByCategory(categoryId) : getProducts
+        
+        setLoading(true)
 
-        asyncFunc().then((response) => {
-            setProducts(response)
-        });
+        const collectionRef = categoryId
+            ? query(collection(db, 'products'), where('category', '==', categoryId))
+            : collection(db, 'products')
+        
+        getDocs(collectionRef)
+            .then(response => {
+                const productsAdapted = response.docs.map(doc => {
+                    const data = doc.data()
+                    return {id: doc.id, ...data}
+                })
+            setProducts(productsAdapted)
+            })
+            .catch(error => {
+                console.log(error)
+            })
+            .finally(() => {
+                setLoading(false)
+            })
+        
+    }, [categoryId])
     
-    }, [categoryId]);
+    if (loading) {
+        return <div>Cargando...</div>
+    }
     
     return (
         <div>

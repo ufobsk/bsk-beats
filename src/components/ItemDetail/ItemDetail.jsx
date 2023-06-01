@@ -10,7 +10,7 @@ const ItemDetail = ({ id, name, img, category, description, price, stock }) => {
 
     const { addItem } = useContext(cartContext)
 
-    const onAdd = (quantity) => {
+    const handleOnAdd = (quantity) => {
         setQuantityAdded(quantity)
 
         const item = {
@@ -18,7 +18,7 @@ const ItemDetail = ({ id, name, img, category, description, price, stock }) => {
         }
 
         addItem(item, quantity)
-    }
+    };
     
     
     return (
@@ -35,7 +35,14 @@ const ItemDetail = ({ id, name, img, category, description, price, stock }) => {
                 <p className="Info">Precio: $USD{price} </p>
             </section>
             <footer className="ItemFooter">
-                <ItemCount initial={0} stock={10} onAdd={(quantity) => console.log("Cantidad agregada", quantity)}/>
+                {
+                    quantityAdded > 0 ? (
+                        <Link to="/cart" className="Option">Terminar Compra</Link>
+                    ) : (
+                        <ItemCount initial={0} stock={stock} onAdd={handleOnAdd}/>
+                    )
+                }
+                <Link to="/" className="Option">Seguir Comprando</Link>
             </footer>
         </article>                                                       
     )
