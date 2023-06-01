@@ -2,7 +2,7 @@
   position: relative;
 }
 
-.TotalQuantity {
+/* .TotalQuantity {
   position: absolute;
   bottom: 24px;
   right: 14px;
@@ -16,7 +16,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-}
+} */
 
 div h3 {
   color: #fff;

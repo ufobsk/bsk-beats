@@ -5,10 +5,10 @@ import { CartContext } from "../../context/cartContext";
 // import { Link } from "react-router-dom";
 import { useContext } from "react";
 
-const styles = {
-    img: {
-        height: 30
-    }
+ const styles = {
+     img: {
+         height: 30
+     }
 };
 
 const CartWidget = () => {

@@ -8,7 +8,8 @@
     flex-direction: column;
     align-items: center;
     padding: 20px;
-    border: 1px solid #e6e6e6
+    border: 1px solid #e6e6e6;
+    background-color: #000000b7;
 }
 
 .Label {
@@ -17,7 +18,8 @@
     align-items: flex-start;
     margin-bottom: 10px;
     font-size: 16px;
-    color: #333;
+    font-weight: bold;
+    color: #e0be29;
 }
 
 .Input {
@@ -32,14 +34,13 @@
 
 .ButtonCheckOut {
     padding: 10px 20px;
-    background-color: #bd7247;
+    background-color: #b8a433;
     border: none;
     border-radius: 5px;
     font-size: 16px;
     color: #fff;
     cursor: pointer;
     text-decoration: none;
-    opacity: 0.5;
 }
 
 .ButtonCheckOut.Active {
@@ -47,5 +48,5 @@
 }
 
 .ButtonCheckOut:hover {
-    background-color: #bc808e;
+    background-color: #bcae80;
 }

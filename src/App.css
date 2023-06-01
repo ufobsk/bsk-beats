@@ -281,15 +281,17 @@ picture {
 
 /* Estilos del Ticket */
 .Ticket {
-  background-color: #e0a841;
-  border: 1px solid #ccc;
+  background-color: #e4aa3eb0;
+  border: 3px solid #ccc;
   border-radius: 5px;
   padding: 10px;
   margin-bottom: 20px;
 }
 
 .Ticket h3 {
-  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  font-size: 25px;
   font-weight: bold;
   margin-bottom: 10px;
 }
@@ -299,13 +301,26 @@ picture {
 }
 
 .Ticket h4 {
+  display: flex;
+  justify-content: center;
   font-weight: bolder;
-  font-size: 16px;
+  font-size: 20px;
   margin-top: 20px;
 }
 
+.CheckoutTitle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 35px;
+  color: #707070;
+}
+
+
+
 #itemName {
-  color: #c58d15;
+  color: #f8f8f8;
   font-weight: bold;
   margin-top: 3rem;
 }

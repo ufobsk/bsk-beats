@@ -49,7 +49,7 @@ const Checkout = () => {
     }
 
     return (
-        <div>
+        <div className='TicketContainer'>
         <div className="Ticket">
           <h3>Resumen de tu compra</h3>
           {cart.map((item) => (
@@ -61,7 +61,7 @@ const Checkout = () => {
           ))}
           <h4>Total a pagar: ${total}</h4>
         </div>
-        <h3>Checkout</h3>
+        <h3 className='CheckoutTitle'>Checkout</h3>
         <CheckoutForm onConfirm={createOrder} />
       </div>
     )
