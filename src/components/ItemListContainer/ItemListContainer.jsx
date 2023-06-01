@@ -10,12 +10,12 @@ import { collection, getFirestore, getDocs, getDoc, doc } from 'firebase/firesto
 
 
 const ItemListContainer = ({greeting}) => {
-    
+
     // useEffect(() =>{
     //     const db = getFirestore();
     
-    //     const biciRef = doc(db, "items1", "isK1ia7EasfLQYvlJSvf");
-    //     getDoc(biciRef).then((snapshot) => {
+    //     const refDoc = doc(db, "items1", "isK1ia7EasfLQYvlJSvf");
+    //     getDoc(refDoc).then((snapshot) => {
     //         if (snapshot.exists()) {
     //             setProducts({ id: snapshot.id, ...snapshot.data() });    
     //         }
