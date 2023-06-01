@@ -1,4 +1,4 @@
-import '../../App.css';
+import './Checkout.css';
 import { useState, useContext } from 'react';
 import { addDoc, collection, Timestamp } from 'firebase/firestore';
 import { db } from '../../services/Firebase/firebaseConfig';
@@ -41,11 +41,11 @@ const Checkout = () => {
     }
 
     if (loading) {
-        return <h1>Tu orden de compra se está generando...</h1>
+        return <h1 className='Generating'>Tu orden de compra se está generando...</h1>
     }
 
     if (orderId) {
-        return <h2>El ID de tu orden es: {orderId} </h2>
+        return <h2 className='Ordencompra'>El ID de tu orden es: {orderId} </h2>
     }
 
     return (

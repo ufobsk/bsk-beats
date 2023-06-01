@@ -1,4 +1,4 @@
-import "../../App.css";
+import "./ItemCount.css";
 import { useState } from 'react';
 
 

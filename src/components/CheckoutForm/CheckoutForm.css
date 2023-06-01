@@ -41,12 +41,13 @@
     color: #fff;
     cursor: pointer;
     text-decoration: none;
+    opacity: 0.4;
 }
 
 .ButtonCheckOut.Active {
     opacity: 1;
 }
 
-.ButtonCheckOut:hover {
+.ButtonCheckOut.Active:hover {
     background-color: #bcae80;
 }

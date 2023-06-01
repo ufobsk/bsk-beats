@@ -1,40 +1,26 @@
-.CartWidget {
-  position: relative;
-}
-
-/* .TotalQuantity {
-  position: absolute;
-  bottom: 24px;
-  right: 14px;
-  background-color: #ecae03;
-  color: #fff;
-  font-weight: bold;
-  font-size: 12px;
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-} */
-
 div h3 {
   color: #fff;
+  display: flex;
+  justify-content: center;
+  font-size: 35px;
+  font-weight: bold;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 h4 {
   color: #fff;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+div button {
+  color: #ecae03;
+  background-color: black;
 }
 
 .Cart {
   margin-top: 20px;
-}
-
-.Cart-total {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  margin-bottom: 10px;
 }
 
 .Cart-total-label {
@@ -64,16 +50,14 @@ h4 {
   margin-top: 10px;
 }
 
-.Cart-empty-link:hover {
-  background-color: #bc808e;
-}
-
 .Cart-buttons {
-  display: flex;
-  justify-content: flex-end;
   margin-top: 10px;
 }
 
 .Cart-buttons > * {
   margin-left: 10px;
+}
+
+.Option {
+  display: flex-end;
 }
