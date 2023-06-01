@@ -1,4 +1,4 @@
-import '../../App.css'
+import './CheckoutForm.css';
 import { useState, useEffect } from 'react'
 
 const CheckoutForm = ({ onConfirm }) => {
@@ -82,4 +82,4 @@ const CheckoutForm = ({ onConfirm }) => {
     )
 }
 
-export default CheckoutForm
+export default CheckoutForm;

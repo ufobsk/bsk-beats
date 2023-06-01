@@ -274,3 +274,38 @@ picture {
 #cardTitle {
   font-size: large;
 }
+
+.itemDetailSection {
+  flex-grow: 1;
+}
+
+/* Estilos del Ticket */
+.Ticket {
+  background-color: #e0a841;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.Ticket h3 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.Ticket p {
+  margin: 5px 0;
+}
+
+.Ticket h4 {
+  font-weight: bolder;
+  font-size: 16px;
+  margin-top: 20px;
+}
+
+#itemName {
+  color: #c58d15;
+  font-weight: bold;
+  margin-top: 3rem;
+}
