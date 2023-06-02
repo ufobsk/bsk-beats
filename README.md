@@ -1,4 +1,4 @@
-### ENTREGA PROYECTO FINAL REACT JS
+# ENTREGA PROYECTO FINAL REACT JS
 
 
 
@@ -10,6 +10,6 @@ Esta página busca lograr que todo aquel que se encuentre interesado en la compr
 la venta de samples/loops y drumkits estan pensados para todo aquel que ya este dentro del mundo o quiera empezar a realizar sus propias
 instrumentales de este género urbano.
 
-# INTEGRACIONES
+### INTEGRACIONES
 
 Este proyecto cuenta con BOOTSTRAP, TOASTIFY, REACT-ROUTER-DOM, CSS, JAVASCRIPT CON SINTAXIS DE REACTJS
