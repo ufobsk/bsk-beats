@@ -16,6 +16,8 @@ export const CartProvider = ({ children }) => {
         ...prevCart,
         { ...item, quantity: parseInt(quantity) }
       ]);
+    } else if (quantity === 0) {
+      console.error('La cantidad tiene que ser mayor a 0');
     } else {
       console.error('El producto ya está agregado');
     }
