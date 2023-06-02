@@ -1,6 +1,5 @@
 import './Checkout.css';
 import { useState, useContext } from 'react';
-import Swal from 'sweetalert2';
 import { addDoc, collection, Timestamp } from 'firebase/firestore';
 import { db } from '../../services/Firebase/firebaseConfig';
 import CheckoutForm from '../CheckoutForm/CheckoutForm';
