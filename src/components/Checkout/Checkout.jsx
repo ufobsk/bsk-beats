@@ -1,5 +1,6 @@
 import './Checkout.css';
 import { useState, useContext } from 'react';
+import Swal from 'sweetalert2';
 import { addDoc, collection, Timestamp } from 'firebase/firestore';
 import { db } from '../../services/Firebase/firebaseConfig';
 import CheckoutForm from '../CheckoutForm/CheckoutForm';
@@ -10,6 +11,12 @@ const Checkout = () => {
     const [orderId, setOrderId] = useState('')
 
     const { cart, total, clearCart } = useContext(CartContext)
+
+    const redirect = () => {
+        setTimeout(() => {
+          window.location = origin;
+        }, 5000);
+      };
 
     const createOrder = async ({ name, surname, phone, email, confirmEmail }) => {
         setLoading(true)
@@ -41,11 +48,23 @@ const Checkout = () => {
     }
 
     if (loading) {
-        return <h1 className='Generating'>Tu orden de compra se está generando...</h1>
+        return (
+            <div className='Contain'>
+                <h1 className='Generating'>Tu orden de compra se está generando...</h1>
+            </div>
+        )
     }
 
     if (orderId) {
-        return <h2 className='Ordencompra'>El ID de tu orden es: {orderId} </h2>
+        return (
+            <div className='Contain'>
+                <h2 className='Ordencompra'>El ID de tu orden es: {orderId}</h2>
+                <h2 className='Ordencompra'>Redireccionando al inicio...</h2>
+                {
+                    redirect()
+                }
+            </div>
+        )    
     }
 
     return (
@@ -53,7 +72,7 @@ const Checkout = () => {
         <div className="Ticket">
           <h3>Resumen de tu compra</h3>
           {cart.map((item) => (
-            <div key={item.id}>
+            <div className="ItemContain" key={item.id}>
               <p id='itemName'>{item.name}</p>
               <p>Precio Unitario: ${item.price}</p>
               <p>Cantidad: {item.quantity}</p>

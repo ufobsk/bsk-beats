@@ -54,3 +54,19 @@
   padding-top: 50px;
   color: #fefdff;
 }
+
+.ItemContain {
+  background-color: #2e2e2e;
+  border-radius: 8px;
+}
+
+.ItemContain p {
+  color: #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Contain {
+  background-color: #2e2e2e;
+}

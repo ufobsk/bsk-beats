@@ -18,7 +18,7 @@ export const CartProvider = ({ children }) => {
         text: "La cantidad tiene que ser mayor a 0",
         className: "info",
         style: {
-          background: "linear-gradient(to right, #6c785c, #6c788c)",
+          background: "linear-gradient(to right, #54553d, #ffe500)",
           fontSize: "x-large",
         },
       }).showToast();
@@ -32,7 +32,7 @@ export const CartProvider = ({ children }) => {
           text: "Producto agregado",
           className: "info",
           style: {
-            background: "linear-gradient(to right, #6c785c, #6c788c)",
+            background: "linear-gradient(to right, #54553d, #ffe500)",
             fontSize: "x-large",
           },
         }).showToast();
@@ -41,7 +41,7 @@ export const CartProvider = ({ children }) => {
           text: "Prodcuto ya agregado, Visite el Carrito",
           className: "info",
           style: {
-            background: "linear-gradient(to right, #6c785c, #6c788c)",
+            background: "linear-gradient(to right, #54553d, #ffe500)",
             fontSize: "x-large",
           },
         }).showToast();
