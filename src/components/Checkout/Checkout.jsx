@@ -3,7 +3,7 @@ import { useState, useContext } from 'react';
 import { addDoc, collection, Timestamp } from 'firebase/firestore';
 import { db } from '../../services/Firebase/firebaseConfig';
 import CheckoutForm from '../CheckoutForm/CheckoutForm';
-import { CartContext } from '../../context/CartContext';
+import { CartContext } from '../../context/cartContext.jsx';
 
 const Checkout = () => {
     const [loading, setLoading] = useState(false)

@@ -1,7 +1,7 @@
 import "../../App.css";
 import Badge from 'react-bootstrap/Badge';
 import cart from './assets/cart.svg';
-import { CartContext } from "../../context/CartContext";
+import { CartContext } from "../../context/cartContext.jsx";
 // import { Link } from "react-router-dom";
 import { useContext } from "react";
 
