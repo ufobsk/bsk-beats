@@ -2,6 +2,10 @@
 
 
 
+https://github.com/ufobsk/bsk-beats/assets/105753908/d64855ba-dee4-4380-9d8e-adc4016d8046
+
+
+
 ## BSKBEATS
 
 Esta proyecto esta insipirado en uno de mis pasatiempos que mas disfruto hacer que es el beatmaking, hacer instrumentales en este caso
@@ -19,3 +23,6 @@ REACT-ROUTER-DOM
 CSS 
 JAVASCRIPT CON SINTAXIS DE REACTJS
 BASE DE DATOS FIREBASE.
+
+
+![bskbeats logo1](https://github.com/ufobsk/bsk-beats/assets/105753908/767cc169-b6f8-45f6-91f2-bf29a8d78678)
